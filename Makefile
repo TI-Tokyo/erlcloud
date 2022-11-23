@@ -1,5 +1,12 @@
+REBAR ?= ./rebar3
+
+.PHONY: clean distclean
+
 all:
-	rebar3 compile
+	@$(REBAR) compile
 
 clean:
-	rebar3 clean
+	@$(REBAR) clean
+
+distclean:
+	@$(REBAR) clean -a
